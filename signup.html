@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="CSS/signup.css">
+</head>
+<body>
+	
+     <a href="index.html"> <img src="images/Logo-removebg-preview.png" alt="Logo"></a>
+	
+    
+	<div class="container">
+		<h1>Sign Up</h1>
+		<form>
+			<label for="fname">First Name:</label>
+			<input type="text" id="fname" name="fname" required>
+			<label for="lname">Last Name:</label>
+			<input type="text" id="lname" name="lname" required>
+			<label for="email">Email Address:</label>
+			<input type="email" id="email" name="email" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<p>*Contains at least one letter <br>
+				Contains at least one digit <br>
+				Contains at least one special character <br>
+				Consists of a combination of letters, digits, and special characters <br>
+				Has a minimum length of 8 characters</p>
+			<label for="confirm-password">Confirm Password:</label>
+			<input type="password" id="confirm-password" name="confirm-password" required>
+			<button type="submit" id="submit-btn">Sign Up</button>
+		</form>
+	</div>
+	<script src="Script/signup.js"></script>
+</body>
+</html>

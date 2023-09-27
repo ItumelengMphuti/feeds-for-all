@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+	margin: 10px;
+	width: 100%;
+	overflow-x: hidden;
+}
+header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+.nav > .nav-header {
+	display: inline;
+	
+  }
+  
+  .nav > .nav-header > .nav-title {
+	display: inline-block;
+	font-size: 22px;
+	color: rgb(223, 80, 151);
+	padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+	display: none;
+  }
+  
+  .nav > .nav-links {
+	display: inline;
+	float: right;
+	font-size: 18px;
+	padding-top: 2%;
+  }
+  
+  .nav > .nav-links > a {
+	display: inline-block;
+	padding: 20px 15px 13px 15px;
+	text-decoration: none;
+	color: rgb(223, 80, 151);
+	margin-inline: 30px;
+	font-weight: 600;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .nav > .nav-links > a:hover {
+	/* background-color: rgb(219, 216, 216); */
+	color: black;
+  }
+  
+  .nav > #nav-check {
+	display: none;
+  }
+  
+  @media (max-width:600px) {
+	.nav > .nav-btn {
+	  display: inline-block;
+	  position: absolute;
+	  right: 5px;
+	  top: 15px;
+	}
+	.nav > .nav-btn > label {
+	  display: inline-block;
+	  width: 50px;
+	  height: 50px;
+	  padding: 13px;
+	}
+	.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+	  background-color: white;
+	}
+	.nav > .nav-btn > label > span {
+	  display: block;
+	  width: 25px;
+	  height: 10px;
+	  border-top: 2px solid #eee;
+	}
+	.nav > .nav-links {
+	  /* position: relative; */
+	  display: block;
+	  width: 100%;
+	  background-color: rgb(255, 255, 255);
+	  height: 0px;
+	  transition: all 0.3s ease-in;
+	  overflow-y: hidden;
+	  top: 50px;
+	  left: 0px;
+	}
+	.nav > .nav-links > a {
+		display: block;
+		/* width: 100%; */
+		text-decoration: none; /* removes underline decoration */
+	  }
+	  
+	.nav > #nav-check:not(:checked) ~ .nav-links {
+	  height: 0px;
+	}
+	.nav> #nav-check:checked ~ .nav-links {
+	  height: calc(100vh - 50px);
+	  overflow-y: auto;
+	}
+  }
+  .logo img {
+    height: 130px;
+    float: left;
+  }
+  .contribution h1 {
+	padding-top: 10%;
+	font-family: "Trirong", serif;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.contribution p {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+button {
+	background-color: rgb(77, 132, 199); 
+	border: 5px;
+	color: white;
+	border-radius: 50px;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 45%;
+	/* margin: 4% auto; */
+	cursor: pointer;
+	margin-top: 5%;
+
+}
+
+@media screen and (max-width: 768px) {
+	.contribution h1 {
+		font-size: 1.2rem;
+		padding-top: 20%;
+	}
+
+	.contribution p {
+		font-size: 1.2rem;
+	}
+
+	button {
+		font-size: 1rem;
+		margin-left: 35%;
+		margin-top: 10%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.contribution h1 {
+		font-size: 1rem;
+		padding-top: 30%;
+	}
+
+	.contribution p {
+		font-size: 1rem;
+	}
+
+	button {
+		font-size: 0.8rem;
+		margin-left: 15%;
+		margin-top: 10%;
+
+	}
+}
