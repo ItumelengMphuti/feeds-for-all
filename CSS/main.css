@@ -3,28 +3,46 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body{
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: rgb(255, 255, 255);
-	margin: 10px;
-	width: 100%;
-	overflow-x: hidden;
-}
-header {
-    background-color: white;
-    position: fixed;
     width: 100%;
-    height: auto;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
     top: 0;
-    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+	z-index: 2;
+}
+.line-1 {
+    z-index: 3;
+    position: relative; 
+    height: 1px; 
+    border: none;
+    border-top: 2px solid  rgb(223, 80, 151); 
+	margin-top: 140px;
+	margin-right: 50px;
+	margin-left: 80px;
+}
+
+
+.nav-scrolled {
+    background-color: white !important; 
 }
 .nav > .nav-header {
 	display: inline;
-	
+	z-index: 3;
   }
   
   .nav > .nav-header > .nav-title {
 	display: inline-block;
-	font-size: 22px;
+	font-size: 25px;
 	color: rgb(223, 80, 151);
 	padding: 10px 10px 10px 10px;
   }
@@ -51,7 +69,6 @@ header {
   }
   
   .nav > .nav-links > a:hover {
-	/* background-color: rgb(219, 216, 216); */
 	color: rgb(8, 2, 2);
   }
   
@@ -94,8 +111,7 @@ header {
 	}
 	.nav > .nav-links > a {
 		display: block;
-		/* width: 100%; */
-		text-decoration: none; /* removes underline decoration */
+		text-decoration: none; 
 	  }
 	  
 	.nav > #nav-check:not(:checked) ~ .nav-links {
@@ -107,34 +123,56 @@ header {
 	}
   }
   .logo img {
-    height: 130px;
+    height: 140px;
     float: left;
   }
-  .background-image {
-	background-image: url(https://sawea.org.za/wp-content/uploads/2020/04/IMG_9331.jpg);
-	background-repeat: no-repeat;
-	background-size: 60% 60%;
-	background-position: center;
-	padding-top: 30%; /* Use a higher value to move the text box lower */
-	padding-bottom: 20px;
+.hero-section {
+    height: 100vh;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/578e1258c534a550d7ebfdd5/1522573446572-G7AE1Y7HA7PFB9HSCJ45/DSC_0375.jpg?format=2500w);
+    background-size: cover;
+    background-position: center;
+	/* opacity: 0.8;
+	background-color: whitesmoke; */
+    position: relative;
 }
 
+.hero-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(51, 35, 35, 0.6); 
+    z-index: 1;
+}
+
+
 .phrase {
-	color: rgb(0, 0, 0);
-	font-family: "Trirong", serif;
-	font-size: 1.0rem;
-	line-height: 1.0;
-	font-weight: bold;
-	margin-top: 0.5rem; /* Use a lower value to move the text box lower */
-	display: grid;
-	place-items: center;
-	background-color: #ffffff;
-	padding: 0.5rem;
-	max-width: 800px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    color: rgb(223, 80, 151);
+    font-family: "Trirong", serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: bolder;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+	z-index: 1;
+}
+
+.phrase::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 @media screen and (max-width: 600px) {
 	.background-image {
@@ -150,6 +188,8 @@ header {
 		margin-top: 0.1rem;
 	}
 }
+
+
   button {
 	background-color: rgb(77, 132, 199); 
 	border: 5px;
