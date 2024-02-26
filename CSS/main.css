@@ -31,7 +31,6 @@ header {
 	margin-left: 80px;
 }
 
-
 .nav-scrolled {
     background-color: white !important; 
 }
@@ -60,16 +59,16 @@ header {
   
   .nav > .nav-links > a {
 	display: inline-block;
-	padding: 20px 15px 13px 15px;
+	padding: 30px 15px 13px 15px;
 	text-decoration: none;
-	color: rgb(223, 80, 151);
+	color: rgb(243, 182, 225);
 	margin-inline: 30px;
-	font-weight: 600;
+	font-weight: 900;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .nav > .nav-links > a:hover {
-	color: rgb(8, 2, 2);
+	color: rgb(223, 80, 151);
   }
   
   .nav > #nav-check {
@@ -123,8 +122,9 @@ header {
 	}
   }
   .logo img {
-    height: 140px;
+    height: 15%;
     float: left;
+	width: 15%;
   }
 .hero-section {
     height: 100vh;
@@ -143,10 +143,10 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(51, 35, 35, 0.6); 
+    background: rgba(65, 51, 51, 0.6); 
+	backdrop-filter: blur(0.2px);
     z-index: 1;
 }
-
 
 .phrase {
     color: rgb(223, 80, 151);
@@ -170,11 +170,11 @@ header {
     bottom: 0;
     left: 0;
 	border-radius: 8px;
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
+    /* background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px); */
     z-index: -1;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.background-image {
 		background-size: 70% 60%;
 		padding-top: 70%;
@@ -189,22 +189,45 @@ header {
 	}
 }
 
-
+.line-2{
+	margin: 2% 20% 0 20%;
+	border-top: 2px solid  rgb(223, 80, 151);	
+	width: 50%;
+}
+.donate {
+	text-align: center;
+	font-family: "Trirong", serif;
+    font-size: 1.3rem;
+	color: blue;
+}
+.donate a {
+	text-decoration: none;
+	
+}
   button {
-	background-color: rgb(77, 132, 199); 
-	border: 5px;
+	background-color: rgb(179, 80, 154); 
+	border: 5px; 
 	color: white;
-	border-radius: 50px;
-	padding: 15px 32px;
+	border-radius: 10px;
+	padding: 9px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
+	font-family: "Trirong", serif;
 	font-size: 16px;
-    font-weight: bold;
 	margin: 4px 2px;
 	cursor: pointer;
-	margin-left: 45%;
+	transition: .3s;
   }
+  button:hover {
+	background-color: #f7f7f7;
+	box-shadow: 0 0 0 5px #3b83f65f;
+	color: #fff;
+	color: rgb(179, 80, 154);
+	font-weight: bold;
+  }
+  
+
   .container {
 	max-width: 1100px;
 	margin: 0 auto;
